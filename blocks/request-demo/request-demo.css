@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .request-demo {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+main .request-demo * {
+  box-sizing: border-box;
+}
+
+main .request-demo .request-demo-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+main .request-demo .request-demo-header {
+  padding: 18px 18px 16px;
+  background-color: #006e30;
+  background-image: linear-gradient(120deg, #006e30 0%, #009a41 60%, #12b968 100%);
+  color: #ffffff;
+}
+
+main .request-demo .request-demo-title {
+  margin: 0 0 6px !important;
+  font-size: 17px !important;
+  line-height: 1.2 !important;
+  font-weight: 700;
+  color: inherit;
+}
+
+main .request-demo .request-demo-desc {
+  margin: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  color: inherit;
+  opacity: 0.92;
+}
+
+main .request-demo .request-demo-form {
+  padding: 14px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+main .request-demo .request-demo-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main .request-demo .request-demo-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+main .request-demo .request-demo-required {
+  color: #d83232;
+}
+
+main .request-demo .request-demo-input {
+  width: 100%;
+  padding: 9px 11px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 6px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+main .request-demo textarea.request-demo-input {
+  resize: vertical;
+  min-height: 44px;
+}
+
+main .request-demo select.request-demo-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M2 4l4 4 4-4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 11px center;
+  padding-right: 30px;
+}
+
+main .request-demo .request-demo-input:focus {
+  outline: none;
+  border-color: #00873c;
+  box-shadow: 0 0 0 3px rgba(0, 135, 60, 0.18);
+}
+
+main .request-demo .request-demo-input.request-demo-invalid {
+  border-color: #d83232;
+  box-shadow: 0 0 0 3px rgba(216, 50, 50, 0.15);
+}
+
+main .request-demo .request-demo-error {
+  margin: 0;
+  font-size: 12px;
+  color: #d83232;
+}
+
+main .request-demo .request-demo-submit {
+  margin-top: 2px;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #00873c;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+main .request-demo .request-demo-submit:hover {
+  opacity: 0.9;
+}
+
+main .request-demo .request-demo-submit:focus-visible {
+  outline: 2px solid #00873c;
+  outline-offset: 2px;
+}
+
+/* Confirmation state */
+main .request-demo .request-demo-confirmation {
+  padding: 22px 20px 26px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+main .request-demo .request-demo-check {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #00873c;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 44px;
+  font-weight: 700;
+}
+
+main .request-demo .request-demo-confirmation h3 {
+  margin: 0 !important;
+  font-size: 16px !important;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+main .request-demo .request-demo-conf-msg {
+  margin: 0 !important;
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+main .request-demo .request-demo-conf-id {
+  margin: 4px 0 0 !important;
+  font-size: 11px !important;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark mode — standalone preview (media query) + Shadow DOM host (.dark class) */
+@media (prefers-color-scheme: dark) {
+  main .request-demo .request-demo-card { background: #1a1a1a; border-color: rgba(255, 255, 255, 0.1); }
+  main .request-demo .request-demo-input { background: #1e1e1e; color: #f0f0f0; border-color: rgba(255, 255, 255, 0.2); }
+  main .request-demo .request-demo-label { color: rgba(255, 255, 255, 0.55); }
+  main .request-demo .request-demo-required { color: #ff6b6b; }
+  main .request-demo .request-demo-confirmation h3 { color: #f5f5f5; }
+  main .request-demo .request-demo-conf-msg { color: rgba(255, 255, 255, 0.7); }
+  main .request-demo .request-demo-conf-id { color: rgba(255, 255, 255, 0.5); }
+  main .request-demo select.request-demo-input { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23bbb' d='M2 4l4 4 4-4z'/%3E%3C/svg%3E"); }
+}
+
+body.dark main .request-demo .request-demo-card { background: #1a1a1a; border-color: rgba(255, 255, 255, 0.1); }
+body.dark main .request-demo .request-demo-input { background: #1e1e1e; color: #f0f0f0; border-color: rgba(255, 255, 255, 0.2); }
+body.dark main .request-demo .request-demo-label { color: rgba(255, 255, 255, 0.55); }
+body.dark main .request-demo .request-demo-required { color: #ff6b6b; }
+body.dark main .request-demo .request-demo-confirmation h3 { color: #f5f5f5; }
+body.dark main .request-demo .request-demo-conf-msg { color: rgba(255, 255, 255, 0.7); }
+body.dark main .request-demo .request-demo-conf-id { color: rgba(255, 255, 255, 0.5); }
+body.dark main .request-demo select.request-demo-input { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23bbb' d='M2 4l4 4 4-4z'/%3E%3C/svg%3E"); }
