@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+
+body {
+  overflow: auto;
+}
+
+main .list-financing-products {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+main .list-financing-products-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+main .list-financing-products-track-wrap {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+main .list-financing-products-track {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+main .list-financing-products-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .list-financing-products-card {
+  flex: 0 0 210px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+main .list-financing-products-img {
+  flex: 0 0 150px;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+main .list-financing-products-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main .list-financing-products-info {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px 12px;
+  gap: 6px;
+  background: #006f46;
+  color: #ffffff;
+}
+
+main .list-financing-products-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .list-financing-products-desc {
+  font-size: 11px;
+  line-height: 1.35;
+  opacity: 0.82;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0 0 2px;
+  flex: 1;
+}
+
+main .list-financing-products-badge-row {
+  display: flex;
+  margin-bottom: 2px;
+}
+
+main .list-financing-products-badge {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+main .list-financing-products-cta {
+  width: 100%;
+  margin-top: auto;
+  padding: 8px 0;
+  background: #f1b434;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s ease;
+}
+
+main .list-financing-products-cta:hover {
+  opacity: 0.88;
+}
+
+main .list-financing-products-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+main .list-financing-products-arrow:focus-visible {
+  outline: 2px solid #f1b434;
+  outline-offset: 2px;
+}
+
+main .list-financing-products-arrow-left {
+  left: 4px;
+}
+
+main .list-financing-products-arrow-right {
+  right: 4px;
+}
+
+main .list-financing-products-fade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .list-financing-products { background: #111; }
+  main .list-financing-products-img { background: #1e1e1e; }
+  main .list-financing-products-card { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
+}
+
+body.dark main .list-financing-products { background: #111; }
+body.dark main .list-financing-products-img { background: #1e1e1e; }
+body.dark main .list-financing-products-card { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
