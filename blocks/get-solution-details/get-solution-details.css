@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .get-solution-details {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 620px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+main .get-solution-details .gsd-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 300px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+main .get-solution-details .gsd-image-panel {
+  flex: 0 0 260px;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+main .get-solution-details .gsd-image-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main .get-solution-details .gsd-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  background: #1a1a1a;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+main .get-solution-details .gsd-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 !important;
+  line-height: 1.3;
+}
+
+main .get-solution-details .gsd-badge {
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 3px 9px;
+  width: fit-content;
+  display: inline-block;
+  letter-spacing: 0.02em;
+}
+
+main .get-solution-details .gsd-description {
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.82;
+  margin: 0 !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .get-solution-details .gsd-cta {
+  margin-top: auto;
+  padding: 11px;
+  width: 100%;
+  background: #555555;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: opacity 0.15s ease;
+}
+
+main .get-solution-details .gsd-cta:hover {
+  opacity: 0.88;
+}
+
+main .get-solution-details .gsd-empty {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .get-solution-details { background: #111; }
+  main .get-solution-details .gsd-image-panel { background: #1e1e1e; }
+  main .get-solution-details .gsd-card { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4); }
+  main .get-solution-details .gsd-empty { color: #aaa; }
+}
+body.dark main .get-solution-details { background: #111; }
+body.dark main .get-solution-details .gsd-image-panel { background: #1e1e1e; }
+body.dark main .get-solution-details .gsd-card { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4); }
+body.dark main .get-solution-details .gsd-empty { color: #aaa; }
