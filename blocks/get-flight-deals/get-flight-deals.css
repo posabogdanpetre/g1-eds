@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .get-flight-deals {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+}
+
+main .get-flight-deals .get-flight-deals-wrapper {
+  position: relative;
+}
+
+main .get-flight-deals .get-flight-deals-track {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px;
+}
+
+main .get-flight-deals .get-flight-deals-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .get-flight-deals .get-flight-deals-card {
+  flex: 0 0 220px;
+  height: 350px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+main .get-flight-deals .get-flight-deals-image {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+main .get-flight-deals .get-flight-deals-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #c62828;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+main .get-flight-deals .get-flight-deals-info {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main .get-flight-deals .get-flight-deals-name {
+  margin: 0 !important;
+  font-size: 14px !important;
+  font-weight: 700;
+  line-height: 1.3 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: inherit;
+}
+
+main .get-flight-deals .get-flight-deals-category {
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.78;
+  color: inherit;
+}
+
+main .get-flight-deals .get-flight-deals-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: inherit;
+  margin-top: 2px;
+}
+
+main .get-flight-deals .get-flight-deals-cta {
+  margin-top: auto;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #3860be;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+main .get-flight-deals .get-flight-deals-cta:hover {
+  opacity: 0.88;
+}
+
+main .get-flight-deals .get-flight-deals-cta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+main .get-flight-deals .get-flight-deals-arrow {
+  position: absolute;
+  top: 75px;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+main .get-flight-deals .get-flight-deals-arrow-left {
+  left: 6px;
+}
+
+main .get-flight-deals .get-flight-deals-arrow-right {
+  right: 6px;
+}
+
+main .get-flight-deals .get-flight-deals-arrow:focus-visible {
+  outline: 2px solid #3860be;
+  outline-offset: 2px;
+}
+
+/* Dark theme — dim outer widget background only, keep palette-colored info strips */
+@media (prefers-color-scheme: dark) {
+  main .get-flight-deals { background: #111; }
+}
+body.dark main .get-flight-deals { background: #111; }
