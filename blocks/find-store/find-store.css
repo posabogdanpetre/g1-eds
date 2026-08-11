@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .find-store {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 12px;
+  background: transparent;
+}
+
+main .find-store .find-store-row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main .find-store .find-store-card {
+  flex: 0 0 260px;
+  max-width: 260px;
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main .find-store .find-store-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main .find-store .find-store-pin {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .find-store .find-store-name {
+  margin: 0 !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  line-height: 1.3 !important;
+}
+
+main .find-store .find-store-address {
+  margin: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  opacity: 0.78;
+}
+
+main .find-store .find-store-phone {
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main .find-store .find-store-hours {
+  margin: 0 !important;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  opacity: 0.65;
+}
+
+main .find-store .find-store-cta {
+  margin-top: 6px;
+  padding: 9px 12px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+main .find-store .find-store-cta:hover {
+  opacity: 0.88;
+}
+
+main .find-store .find-store-cta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Empty state */
+main .find-store .find-store-empty {
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+main .find-store .find-store-empty-pin {
+  opacity: 0.8;
+}
+
+main .find-store .find-store-empty-title {
+  margin: 0 !important;
+  font-size: 15px !important;
+  font-weight: 600;
+}
+
+main .find-store .find-store-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+main .find-store .find-store-input::placeholder {
+  color: #888;
+}
+
+main .find-store .find-store-cta-block {
+  width: 100%;
+  margin-top: 0;
+}
+
+/* Dark mode — keep palette-colored cards, only touch outer background */
+@media (prefers-color-scheme: dark) {
+  main .find-store { background: transparent; }
+}
+body.dark main .find-store { background: transparent; }
