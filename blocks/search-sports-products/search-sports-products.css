@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .search-sports-products {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  box-sizing: border-box;
+}
+
+main .search-sports-products * {
+  box-sizing: border-box;
+}
+
+main .search-sports-products .ssp-wrapper {
+  position: relative;
+}
+
+main .search-sports-products .ssp-track {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px 2px;
+}
+
+main .search-sports-products .ssp-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .search-sports-products .ssp-card {
+  flex: 0 0 220px;
+  height: 384px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+  background: #1a1a1a;
+}
+
+main .search-sports-products .ssp-img {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  flex: 0 0 auto;
+  background: #f2f2f2;
+}
+
+main .search-sports-products .ssp-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main .search-sports-products .ssp-discount {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #CC0000;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 4px;
+}
+
+main .search-sports-products .ssp-stock-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 7px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+main .search-sports-products .ssp-stock-low {
+  background: #e68619;
+}
+
+main .search-sports-products .ssp-stock-out {
+  background: #57575A;
+}
+
+main .search-sports-products .ssp-info {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 10px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main .search-sports-products .ssp-brand {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.75;
+}
+
+main .search-sports-products .ssp-name {
+  margin: 0 !important;
+  font-size: 14px !important;
+  line-height: 1.25 !important;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .search-sports-products .ssp-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+main .search-sports-products .ssp-price {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+main .search-sports-products .ssp-orig {
+  font-size: 11px;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+main .search-sports-products .ssp-meta {
+  font-size: 11px;
+  line-height: 1.35;
+  opacity: 0.82;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .search-sports-products .ssp-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 6px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+main .search-sports-products .ssp-cta {
+  flex: 1;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 6px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  font-family: inherit;
+}
+
+main .search-sports-products .ssp-cta-primary {
+  color: #fff;
+}
+
+main .search-sports-products .ssp-cta-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: inherit;
+}
+
+main .search-sports-products .ssp-cta:hover {
+  opacity: 0.85;
+}
+
+main .search-sports-products .ssp-arrow {
+  position: absolute;
+  top: 75px;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(20, 20, 20, 0.72);
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+main .search-sports-products .ssp-arrow-left {
+  left: 2px;
+}
+
+main .search-sports-products .ssp-arrow-right {
+  right: 2px;
+}
+
+main .search-sports-products .ssp-arrow:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+main .search-sports-products .ssp-summary {
+  margin: 10px 4px 2px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #57575A;
+}
+
+main .search-sports-products .ssp-empty {
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 13px;
+  color: #57575A;
+}
+
+/* Dark theme — dim outer background only; card info strips keep palette color */
+@media (prefers-color-scheme: dark) {
+  main .search-sports-products { background: #111; }
+  main .search-sports-products .ssp-summary { color: #b8b8ba; }
+  main .search-sports-products .ssp-empty { color: #b8b8ba; }
+}
+
+body.dark main .search-sports-products { background: #111; }
+body.dark main .search-sports-products .ssp-summary { color: #b8b8ba; }
+body.dark main .search-sports-products .ssp-empty { color: #b8b8ba; }
