@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .find-current-deals {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  box-sizing: border-box;
+}
+
+main .find-current-deals .fcd-wrapper {
+  position: relative;
+}
+
+main .find-current-deals .fcd-track {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px 0;
+}
+
+main .find-current-deals .fcd-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .find-current-deals .fcd-card {
+  flex: 0 0 220px;
+  height: 350px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+main .find-current-deals .fcd-img {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  flex: 0 0 150px;
+  background: #eee;
+}
+
+main .find-current-deals .fcd-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #b3121a;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 4px;
+}
+
+main .find-current-deals .fcd-info {
+  padding: 10px 14px;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main .find-current-deals .fcd-name {
+  margin: 0 !important;
+  font-size: 14px !important;
+  line-height: 1.25 !important;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .find-current-deals .fcd-meta {
+  margin: 0 !important;
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+  opacity: 0.78;
+}
+
+main .find-current-deals .fcd-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+main .find-current-deals .fcd-orig {
+  font-size: 11px;
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+main .find-current-deals .fcd-cur {
+  font-size: 13px;
+  font-weight: 700;
+  color: inherit;
+}
+
+main .find-current-deals .fcd-stock {
+  font-size: 11px;
+  opacity: 0.72;
+}
+
+main .find-current-deals .fcd-cta {
+  margin-top: auto;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background: #6100A2;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+main .find-current-deals .fcd-cta:hover {
+  opacity: 0.88;
+}
+
+main .find-current-deals .fcd-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(20, 20, 20, 0.72);
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  display: none;
+}
+
+main .find-current-deals .fcd-nav-left { left: 4px; }
+main .find-current-deals .fcd-nav-right { right: 4px; }
+
+main .find-current-deals .fcd-nav:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+main .find-current-deals .fcd-summary {
+  margin: 10px 2px 2px !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  color: #57575A;
+}
+
+main .find-current-deals .fcd-empty {
+  padding: 24px;
+  text-align: center;
+  color: #57575A;
+  font-size: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .find-current-deals { background: #111; }
+  main .find-current-deals .fcd-summary { color: #b8b8bb; }
+  main .find-current-deals .fcd-empty { color: #b8b8bb; }
+}
+body.dark main .find-current-deals { background: #111; }
+body.dark main .find-current-deals .fcd-summary { color: #b8b8bb; }
+body.dark main .find-current-deals .fcd-empty { color: #b8b8bb; }
