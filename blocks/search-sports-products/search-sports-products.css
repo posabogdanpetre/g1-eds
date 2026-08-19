@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .search-sports-products {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+}
+
+main .search-sports-products .ssp-wrapper {
+  position: relative;
+}
+
+main .search-sports-products .ssp-track {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 2px;
+}
+
+main .search-sports-products .ssp-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .search-sports-products .ssp-card {
+  flex: 0 0 220px;
+  height: 360px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  background: #1a1a1a;
+}
+
+main .search-sports-products .ssp-img {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  flex: 0 0 150px;
+  background: #f5f5f5;
+}
+
+main .search-sports-products .ssp-discount {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #e4002b;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+main .search-sports-products .ssp-info {
+  flex: 1;
+  min-height: 0;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+main .search-sports-products .ssp-brand {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+main .search-sports-products .ssp-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .search-sports-products .ssp-cat {
+  font-size: 11px;
+  opacity: 0.78;
+}
+
+main .search-sports-products .ssp-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+main .search-sports-products .ssp-price {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+main .search-sports-products .ssp-orig {
+  font-size: 11px;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+main .search-sports-products .ssp-avail {
+  font-size: 11px;
+  opacity: 0.72;
+}
+
+main .search-sports-products .ssp-cta {
+  margin-top: auto;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #6100a2;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+main .search-sports-products .ssp-cta:hover {
+  opacity: 0.88;
+}
+
+main .search-sports-products .ssp-fade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  pointer-events: none;
+  border-radius: 0 10px 10px 0;
+}
+
+main .search-sports-products .ssp-arrow {
+  position: absolute;
+  top: 75px;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 2;
+}
+
+main .search-sports-products .ssp-arrow-left {
+  left: 4px;
+}
+
+main .search-sports-products .ssp-arrow-right {
+  right: 4px;
+}
+
+main .search-sports-products .ssp-arrow:focus-visible {
+  outline: 2px solid #6100a2;
+  outline-offset: 2px;
+}
+
+main .search-sports-products .ssp-summary {
+  margin: 12px 4px 4px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #111;
+}
+
+main .search-sports-products .ssp-empty {
+  padding: 16px;
+  font-size: 14px;
+  color: #111;
+}
+
+/* Dark theme — dim outer widget background only; card info strips keep the brand color */
+@media (prefers-color-scheme: dark) {
+  main .search-sports-products { background: #111; }
+  main .search-sports-products .ssp-summary { color: #eee; }
+  main .search-sports-products .ssp-empty { color: #eee; }
+}
+body.dark main .search-sports-products { background: #111; }
+body.dark main .search-sports-products .ssp-summary { color: #eee; }
+body.dark main .search-sports-products .ssp-empty { color: #eee; }
