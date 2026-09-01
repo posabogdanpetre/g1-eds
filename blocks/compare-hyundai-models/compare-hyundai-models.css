@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Hyundai+Sans+Text:wght@400;500;600;700&display=swap');
+
+main > div,
+main > .section,
+main > .section:first-of-type { margin: 0; }
+main > .section > div { max-width: none; padding: 0; }
+body { overflow: auto; }
+
+main .compare-hyundai-models {
+  font-family: 'Hyundai Sans Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+main .compare-hyundai-models h1,
+main .compare-hyundai-models h2,
+main .compare-hyundai-models h3,
+main .compare-hyundai-models [class*="title"],
+main .compare-hyundai-models [class*="name"] {
+  font-family: 'Hyundai Sans Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .compare-hyundai-models-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  --label-col: 104px;
+  --label-gap: 10px;
+}
+
+main .compare-hyundai-models-header-row {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+}
+
+main .compare-hyundai-models-row-spacer {
+  flex: 0 0 var(--label-col);
+}
+
+main .compare-hyundai-models-header-row .compare-hyundai-models-row-spacer {
+  flex-basis: calc(var(--label-col) + var(--label-gap) - 2px);
+}
+
+main .compare-hyundai-models-header-panel {
+  flex: 1 1 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main .compare-hyundai-models-header-image {
+  flex: 0 0 140px;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+main .compare-hyundai-models-header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main .compare-hyundai-models-header-image-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+main .compare-hyundai-models-header-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px;
+  gap: 6px;
+  background: #002c5e;
+  color: #fff;
+  overflow: hidden;
+}
+
+main .compare-hyundai-models-header-chip {
+  align-self: flex-start;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  background: rgba(255,255,255,0.16);
+  color: inherit;
+  border-radius: 4px;
+}
+
+main .compare-hyundai-models-header-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .compare-hyundai-models-header-year {
+  font-size: 12px;
+  opacity: 0.8;
+  margin: 0;
+}
+
+main .compare-hyundai-models-table {
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+main .compare-hyundai-models-table-row {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  gap: 10px;
+  border-top: 1px solid rgba(128,128,128,0.15);
+}
+
+main .compare-hyundai-models-table-row:nth-child(even) {
+  background: rgba(128,128,128,0.14);
+}
+
+main .compare-hyundai-models-table-label {
+  flex: 0 0 var(--label-col);
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+main .compare-hyundai-models-table-value {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 13px;
+  overflow-wrap: break-word;
+  white-space: normal;
+  box-sizing: border-box;
+  border-left: 2px solid transparent;
+  padding-left: 6px;
+}
+
+main .compare-hyundai-models-table-value-diff {
+  font-weight: 700;
+  border-left-color: #2486d3;
+}
+
+main .compare-hyundai-models-table-row-lead .compare-hyundai-models-table-value {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+main .compare-hyundai-models-table-row-lead .compare-hyundai-models-table-label {
+  opacity: 0.85;
+}
+
+main .compare-hyundai-models-cta-row {
+  padding: 10px 12px;
+  gap: var(--label-gap);
+  border-top: 1px solid rgba(128,128,128,0.15);
+}
+
+main .compare-hyundai-models-table-cta {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 10px;
+  background: #002c5e;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: opacity 0.15s ease;
+}
+
+main .compare-hyundai-models-table-cta:hover,
+main .compare-hyundai-models-table-cta:focus-visible {
+  opacity: 0.88;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .compare-hyundai-models { background: #111; }
+  main .compare-hyundai-models-header-image { background: #1e1e1e; }
+  main .compare-hyundai-models-card { background: #1a1a1a; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+  main .compare-hyundai-models-table-row { border-top-color: rgba(255,255,255,0.12); color: #f0f0f0; }
+  main .compare-hyundai-models-table-row:nth-child(even) { background: rgba(255,255,255,0.06); }
+  main .compare-hyundai-models-table-label { opacity: 0.7; }
+  main .compare-hyundai-models-table-value-diff { border-left-color: #5aa9e6; }
+}
+body.dark main .compare-hyundai-models { background: #111; }
+body.dark main .compare-hyundai-models-header-image { background: #1e1e1e; }
+body.dark main .compare-hyundai-models-card { background: #1a1a1a; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+body.dark main .compare-hyundai-models-table-row { border-top-color: rgba(255,255,255,0.12); color: #f0f0f0; }
+body.dark main .compare-hyundai-models-table-row:nth-child(even) { background: rgba(255,255,255,0.06); }
+body.dark main .compare-hyundai-models-table-label { opacity: 0.7; }
+body.dark main .compare-hyundai-models-table-value-diff { border-left-color: #5aa9e6; }
