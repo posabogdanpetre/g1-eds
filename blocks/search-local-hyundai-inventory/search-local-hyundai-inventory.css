@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .search-local-hyundai-inventory {
+  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+main .search-local-hyundai-inventory h1,
+main .search-local-hyundai-inventory h2,
+main .search-local-hyundai-inventory h3,
+main .search-local-hyundai-inventory [class*="name"] {
+  font-family: 'Barlow Condensed', 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .search-local-hyundai-inventory-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+main .search-local-hyundai-inventory-sort-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #333333;
+  margin-right: 2px;
+}
+
+main .search-local-hyundai-inventory-sort-btn {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border: 1px solid #002c5e;
+  background: #ffffff;
+  color: #002c5e;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+main .search-local-hyundai-inventory-sort-btn:hover,
+main .search-local-hyundai-inventory-sort-btn:focus-visible {
+  background: #eaf2fb;
+}
+
+main .search-local-hyundai-inventory-sort-btn.is-active {
+  background: #002c5e;
+  color: #ffffff;
+}
+
+main .search-local-hyundai-inventory-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+main .search-local-hyundai-inventory-track-wrap {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+main .search-local-hyundai-inventory-track {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+main .search-local-hyundai-inventory-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .search-local-hyundai-inventory-card {
+  flex: 0 0 220px;
+  min-height: 360px;
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-sizing: border-box;
+}
+
+main .search-local-hyundai-inventory-img {
+  flex: 0 0 130px;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+main .search-local-hyundai-inventory-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main .search-local-hyundai-inventory-info {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px 12px;
+  gap: 3px;
+  background: #002c5e;
+  color: #ffffff;
+}
+
+main .search-local-hyundai-inventory-name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.1;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .search-local-hyundai-inventory-sub {
+  font-size: 12px;
+  opacity: 0.82;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .search-local-hyundai-inventory-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin: 2px 0;
+}
+
+main .search-local-hyundai-inventory-spec {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+main .search-local-hyundai-inventory-spec-label {
+  opacity: 0.6;
+  flex: 0 0 auto;
+}
+
+main .search-local-hyundai-inventory-spec-val {
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+main .search-local-hyundai-inventory-price-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+main .search-local-hyundai-inventory-price {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+main .search-local-hyundai-inventory-badge {
+  font-size: 10px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 0;
+  padding: 2px 6px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+main .search-local-hyundai-inventory-price-note {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+main .search-local-hyundai-inventory-details {
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+main .search-local-hyundai-inventory-details summary {
+  cursor: pointer;
+  color: #8bc0ee;
+  font-weight: 600;
+  list-style: none;
+}
+
+main .search-local-hyundai-inventory-details summary::-webkit-details-marker {
+  display: none;
+}
+
+main .search-local-hyundai-inventory-vin {
+  font-size: 10px;
+  opacity: 0.85;
+  margin: 4px 0;
+  word-break: break-all;
+}
+
+main .search-local-hyundai-inventory-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+main .search-local-hyundai-inventory-action {
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 8px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: transparent;
+  color: #ffffff;
+  border-radius: 0;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s ease;
+}
+
+main .search-local-hyundai-inventory-action:hover,
+main .search-local-hyundai-inventory-action:focus-visible {
+  background: rgba(255,255,255,0.12);
+}
+
+main .search-local-hyundai-inventory-cta {
+  width: 100%;
+  margin-top: auto;
+  padding: 8px 0;
+  background: #002c5e;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+main .search-local-hyundai-inventory-cta:hover,
+main .search-local-hyundai-inventory-cta:focus-visible {
+  background: #001a3d;
+}
+
+main .search-local-hyundai-inventory-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: rgba(0,0,0,0.72);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+main .search-local-hyundai-inventory-arrow:focus-visible {
+  outline: 2px solid #2486d3;
+  outline-offset: 2px;
+}
+
+main .search-local-hyundai-inventory-arrow-left {
+  left: 4px;
+}
+
+main .search-local-hyundai-inventory-arrow-right {
+  right: 4px;
+}
+
+main .search-local-hyundai-inventory-fade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .search-local-hyundai-inventory { background: #111; }
+  main .search-local-hyundai-inventory-sort-label { color: #e6ecf3; }
+  main .search-local-hyundai-inventory-sort-btn { background: #1a1a1a; color: #8bc0ee; border-color: #2486d3; }
+  main .search-local-hyundai-inventory-sort-btn.is-active { background: #002c5e; color: #ffffff; }
+  main .search-local-hyundai-inventory-img { background: #1e1e1e; }
+  main .search-local-hyundai-inventory-card { box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+}
+body.dark main .search-local-hyundai-inventory { background: #111; }
+body.dark main .search-local-hyundai-inventory-sort-label { color: #e6ecf3; }
+body.dark main .search-local-hyundai-inventory-sort-btn { background: #1a1a1a; color: #8bc0ee; border-color: #2486d3; }
+body.dark main .search-local-hyundai-inventory-sort-btn.is-active { background: #002c5e; color: #ffffff; }
+body.dark main .search-local-hyundai-inventory-img { background: #1e1e1e; }
+body.dark main .search-local-hyundai-inventory-card { box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
