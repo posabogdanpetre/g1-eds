@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .find-hyundai-dealers {
+  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+main .find-hyundai-dealers [class*="name"],
+main .find-hyundai-dealers .fhd-name,
+main .find-hyundai-dealers .fhd-empty-title {
+  font-family: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Results view — map left, cards right */
+main .find-hyundai-dealers .fhd-results {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: stretch;
+}
+
+main .find-hyundai-dealers .fhd-map-panel {
+  flex: 0 0 232px;
+  width: 232px;
+  min-height: 240px;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  background: #10233b;
+}
+
+main .find-hyundai-dealers .fhd-rail {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  flex: 1 1 0;
+  min-width: 0;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+main .find-hyundai-dealers .fhd-rail::-webkit-scrollbar { display: none; }
+main .find-hyundai-dealers.fhd-no-map .fhd-rail,
+main .find-hyundai-dealers .fhd-no-map .fhd-rail { width: 100%; }
+
+main .find-hyundai-dealers .fhd-card {
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 260px;
+  border-radius: 0;
+  padding: 14px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.4s ease-in-out;
+}
+main .find-hyundai-dealers .fhd-card.fhd-selected {
+  border-top: 2px solid #2486d3;
+}
+
+main .find-hyundai-dealers .fhd-card-head {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+main .find-hyundai-dealers .fhd-pin-num {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .find-hyundai-dealers .fhd-title-wrap { min-width: 0; }
+
+main .find-hyundai-dealers .fhd-name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+main .find-hyundai-dealers .fhd-dist {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+
+main .find-hyundai-dealers .fhd-addr {
+  font-size: 14px;
+  opacity: 0.78;
+  line-height: 1.3;
+}
+
+main .find-hyundai-dealers .fhd-phone {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+main .find-hyundai-dealers .fhd-caps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 2px 0;
+}
+
+main .find-hyundai-dealers .fhd-chip {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 0;
+  background: rgba(36, 134, 211, 0.22);
+  color: inherit;
+  white-space: nowrap;
+}
+
+main .find-hyundai-dealers .fhd-hours {
+  font-size: 12px;
+  opacity: 0.65;
+  line-height: 1.3;
+}
+
+main .find-hyundai-dealers .fhd-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+main .find-hyundai-dealers .fhd-cta {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+main .find-hyundai-dealers .fhd-cta-primary {
+  color: #fff;
+}
+main .find-hyundai-dealers .fhd-cta-primary:hover,
+main .find-hyundai-dealers .fhd-cta-primary:focus-visible {
+  background: #001a3d !important;
+}
+
+main .find-hyundai-dealers .fhd-cta-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: inherit;
+}
+main .find-hyundai-dealers .fhd-cta-secondary:hover,
+main .find-hyundai-dealers .fhd-cta-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+main .find-hyundai-dealers .fhd-cta:focus-visible {
+  outline: 2px solid #2486d3;
+  outline-offset: 2px;
+}
+
+/* Fallback projected-pin map */
+main .find-hyundai-dealers .fhd-map-fallback .fhd-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+main .find-hyundai-dealers .fhd-fallback-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  border: 2px solid #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .find-hyundai-dealers .fhd-fallback-pin.fhd-pin-active {
+  box-shadow: 0 0 0 4px rgba(36, 134, 211, 0.55);
+  z-index: 5;
+}
+
+/* Leaflet pin */
+main .find-hyundai-dealers .fhd-leaflet-pin {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+main .find-hyundai-dealers .fhd-leaflet-pin.fhd-pin-active {
+  box-shadow: 0 0 0 4px rgba(36, 134, 211, 0.55);
+}
+
+/* Critical Leaflet layout rules (inlined so layout survives blocked stylesheet) */
+main .find-hyundai-dealers .leaflet-pane,
+main .find-hyundai-dealers .leaflet-tile,
+main .find-hyundai-dealers .leaflet-marker-icon,
+main .find-hyundai-dealers .leaflet-marker-shadow,
+main .find-hyundai-dealers .leaflet-tile-pane,
+main .find-hyundai-dealers .leaflet-overlay-pane,
+main .find-hyundai-dealers .leaflet-shadow-pane,
+main .find-hyundai-dealers .leaflet-marker-pane,
+main .find-hyundai-dealers .leaflet-popup-pane,
+main .find-hyundai-dealers .leaflet-map-pane svg,
+main .find-hyundai-dealers .leaflet-map-pane canvas,
+main .find-hyundai-dealers .leaflet-zoom-box,
+main .find-hyundai-dealers .leaflet-image-layer,
+main .find-hyundai-dealers .leaflet-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+main .find-hyundai-dealers .leaflet-container { overflow: hidden; height: 100%; width: 100%; }
+main .find-hyundai-dealers .leaflet-tile { width: 256px !important; height: 256px !important; max-width: none !important; }
+main .find-hyundai-dealers .leaflet-tile-pane { z-index: 200; }
+main .find-hyundai-dealers .leaflet-overlay-pane { z-index: 400; }
+main .find-hyundai-dealers .leaflet-marker-pane { z-index: 600; }
+main .find-hyundai-dealers .leaflet-popup-pane { z-index: 700; }
+main .find-hyundai-dealers .leaflet-control-attribution { font-size: 8px; }
+main .find-hyundai-dealers .leaflet-marker-icon { background: transparent; border: none; }
+
+/* No-results fallback card */
+main .find-hyundai-dealers .find-hyundai-dealers-empty {
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 0;
+  padding: 28px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+main .find-hyundai-dealers .fhd-empty-pin { font-size: 32px; opacity: 0.7; }
+main .find-hyundai-dealers .fhd-empty-title { font-size: 16px; font-weight: 600; }
+main .find-hyundai-dealers .fhd-empty-hint { font-size: 14px; opacity: 0.7; }
+main .find-hyundai-dealers .fhd-empty-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  font-family: inherit;
+}
+main .find-hyundai-dealers .fhd-empty-btn {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  background: #002c5e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+main .find-hyundai-dealers .fhd-empty-btn:hover,
+main .find-hyundai-dealers .fhd-empty-btn:focus-visible { background: #001a3d; }
+
+[hidden] { display: none !important; }
+
+/* Responsive — stack below 560px, map becomes a locating strip */
+@media (max-width: 560px) {
+  main .find-hyundai-dealers .fhd-results { flex-direction: column; }
+  main .find-hyundai-dealers .fhd-map-panel {
+    flex: 0 0 140px;
+    width: 100%;
+    min-height: 140px;
+    height: 140px;
+  }
+}
+
+/* Dark mode — dim outer widget only; keep palette-colored cards */
+@media (prefers-color-scheme: dark) {
+  main .find-hyundai-dealers { background: transparent; }
+}
+body.dark main .find-hyundai-dealers { background: transparent; }
