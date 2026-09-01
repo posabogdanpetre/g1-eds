@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .estimate-hyundai-payment {
+  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 460px;
+  box-sizing: border-box;
+}
+
+main .estimate-hyundai-payment *,
+main .estimate-hyundai-payment *::before,
+main .estimate-hyundai-payment *::after {
+  box-sizing: border-box;
+}
+
+main .estimate-hyundai-payment h1,
+main .estimate-hyundai-payment h2,
+main .estimate-hyundai-payment h3,
+main .estimate-hyundai-payment .ehp-amount {
+  font-family: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .estimate-hyundai-payment .ehp-card {
+  border-radius: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Tabs */
+main .estimate-hyundai-payment .ehp-tabs {
+  display: flex;
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 3px;
+  border-radius: 0;
+}
+main .estimate-hyundai-payment .ehp-tab {
+  flex: 1 1 0;
+  padding: 8px 4px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: background-color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+main .estimate-hyundai-payment .ehp-tab.active {
+  background: #1c6cab;
+  color: #fff;
+  opacity: 1;
+}
+main .estimate-hyundai-payment .ehp-tab:focus-visible {
+  outline: 2px solid #2486d3;
+  outline-offset: 2px;
+}
+
+/* Hero */
+main .estimate-hyundai-payment .ehp-hero {
+  text-align: center;
+  padding: 4px 0 2px;
+}
+main .estimate-hyundai-payment .ehp-hero-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+}
+main .estimate-hyundai-payment .ehp-amount {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+}
+main .estimate-hyundai-payment .ehp-per {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.75;
+}
+main .estimate-hyundai-payment .ehp-hero-sub {
+  margin-top: 4px;
+  font-size: 13px;
+  opacity: 0.78;
+}
+
+/* Breakdown grid */
+main .estimate-hyundai-payment .ehp-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+main .estimate-hyundai-payment .ehp-grid dt {
+  font-size: 13px;
+  opacity: 0.72;
+}
+main .estimate-hyundai-payment .ehp-grid dd {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+}
+main .estimate-hyundai-payment .ehp-grid dt.lead,
+main .estimate-hyundai-payment .ehp-grid dd.lead {
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 1;
+  padding-top: 4px;
+}
+
+/* Sliders */
+main .estimate-hyundai-payment .ehp-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4px;
+}
+main .estimate-hyundai-payment .ehp-slider-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+main .estimate-hyundai-payment .ehp-slider-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+}
+main .estimate-hyundai-payment .ehp-slider-val {
+  font-size: 13px;
+  font-weight: 700;
+}
+main .estimate-hyundai-payment input[type='range'] {
+  width: 100%;
+  height: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  cursor: pointer;
+}
+main .estimate-hyundai-payment input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2486d3;
+  cursor: pointer;
+}
+main .estimate-hyundai-payment input[type='range']::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 50%;
+  background: #2486d3;
+  cursor: pointer;
+}
+main .estimate-hyundai-payment input[type='range']:focus-visible {
+  outline: 2px solid #2486d3;
+  outline-offset: 3px;
+}
+
+/* Chips */
+main .estimate-hyundai-payment .ehp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+main .estimate-hyundai-payment .ehp-chip {
+  font-size: 11px;
+  padding: 3px 8px;
+  background: rgba(36, 134, 211, 0.22);
+  color: inherit;
+  border-radius: 0;
+  line-height: 1.3;
+}
+
+/* Footnote */
+main .estimate-hyundai-payment .ehp-foot {
+  margin: 0;
+  font-size: 11px;
+  opacity: 0.6;
+  line-height: 1.3;
+}
+
+/* CTAs */
+main .estimate-hyundai-payment .ehp-cta {
+  display: flex;
+  gap: 8px;
+}
+main .estimate-hyundai-payment .ehp-btn {
+  flex: 1 1 0;
+  padding: 10px 6px;
+  border: none;
+  border-radius: 0;
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+main .estimate-hyundai-payment .ehp-btn-primary {
+  background: #002c5e;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+main .estimate-hyundai-payment .ehp-btn-primary:hover,
+main .estimate-hyundai-payment .ehp-btn-primary:focus-visible {
+  background: #011f42;
+}
+main .estimate-hyundai-payment .ehp-btn-secondary {
+  background: #1c6cab;
+  color: #fff;
+}
+main .estimate-hyundai-payment .ehp-btn-secondary:hover,
+main .estimate-hyundai-payment .ehp-btn-secondary:focus-visible {
+  background: #155a8f;
+}
+main .estimate-hyundai-payment .ehp-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+main .estimate-hyundai-payment .ehp-empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--text-color, #333);
+  font-size: 14px;
+}
+
+/* Dark mode — dim outer widget background only; card keeps brand navy */
+@media (prefers-color-scheme: dark) {
+  main .estimate-hyundai-payment { background: #111; }
+}
+body.dark main .estimate-hyundai-payment { background: #111; }
