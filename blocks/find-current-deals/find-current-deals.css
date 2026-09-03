@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+
+body {
+  overflow: auto;
+}
+
+main .find-current-deals {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  box-sizing: border-box;
+}
+
+main .find-current-deals .deals-wrapper {
+  position: relative;
+}
+
+main .find-current-deals .deals-track {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px 0;
+}
+
+main .find-current-deals .deals-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .find-current-deals .deal-card {
+  flex: 0 0 220px;
+  height: 350px;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+main .find-current-deals .deal-image {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  flex: 0 0 auto;
+  background: #f0f0f0;
+}
+
+main .find-current-deals .deal-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #c62828;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+main .find-current-deals .deal-info {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px 8px;
+  box-sizing: border-box;
+}
+
+main .find-current-deals .deal-brand {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.75;
+  margin-top: 4px;
+}
+
+main .find-current-deals .deal-title {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 2px 0 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .find-current-deals .deal-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: auto;
+}
+
+main .find-current-deals .deal-orig {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: line-through;
+}
+
+main .find-current-deals .deal-cur {
+  font-size: 14px;
+  font-weight: 700;
+  color: inherit;
+}
+
+main .find-current-deals .deal-cta {
+  margin-top: 8px;
+  width: 100%;
+  border: none;
+  background: #3de525;
+  color: #6100a2;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 4px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+main .find-current-deals .deal-cta:hover,
+main .find-current-deals .deal-cta:focus-visible {
+  background: #3de525;
+}
+
+main .find-current-deals .deals-arrow {
+  position: absolute;
+  top: 75px;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 5;
+}
+
+main .find-current-deals .deals-arrow-left {
+  left: 4px;
+}
+
+main .find-current-deals .deals-arrow-right {
+  right: 4px;
+}
+
+main .find-current-deals .deals-arrow:focus-visible {
+  outline: 2px solid #3de525;
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .find-current-deals {
+    background: #111;
+  }
+}
+
+body.dark main .find-current-deals {
+  background: #111;
+}
