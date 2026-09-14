@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .find-store {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 10px;
+  background: transparent;
+}
+
+main .find-store .find-store-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+main .find-store .find-store-search {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  max-width: 520px;
+  padding: 12px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+main .find-store .find-store-input {
+  flex: 1;
+  min-width: 0;
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+main .find-store .find-store-input:focus {
+  outline: 2px solid #6100a2;
+  outline-offset: 1px;
+}
+
+main .find-store .find-store-btn {
+  background: #6100a2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+main .find-store .find-store-btn:hover {
+  opacity: 0.88;
+}
+
+main .find-store .find-store-empty {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+main .find-store .find-store-empty-pin {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+main .find-store .find-store-empty-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+main .find-store .find-store-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+}
+
+main .find-store .find-store-card {
+  flex: 0 0 260px;
+  max-width: 260px;
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+main .find-store .find-store-pin {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+main .find-store .find-store-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+main .find-store .find-store-address {
+  font-size: 12px;
+  opacity: 0.78;
+  line-height: 1.35;
+}
+
+main .find-store .find-store-phone {
+  font-size: 12px;
+  color: #c99cff;
+  font-weight: 600;
+}
+
+main .find-store .find-store-hours {
+  font-size: 11px;
+  opacity: 0.65;
+  line-height: 1.35;
+}
+
+main .find-store .find-store-map {
+  margin-top: 8px;
+  align-self: flex-start;
+  background: transparent;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+main .find-store .find-store-map:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Dark mode — keep palette card bg, dim only the outer widget background */
+@media (prefers-color-scheme: dark) {
+  main .find-store { background: transparent; }
+}
+body.dark main .find-store { background: transparent; }
