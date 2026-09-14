@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .get-asus-product-details {
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  box-sizing: border-box;
+}
+
+main .get-asus-product-details h1,
+main .get-asus-product-details h2,
+main .get-asus-product-details h3,
+main .get-asus-product-details [class*="title"],
+main .get-asus-product-details [class*="name"] {
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .get-asus-product-details .gapd-card {
+  display: flex;
+  flex-direction: row;
+  height: 340px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+main .get-asus-product-details .gapd-image {
+  flex: 0 0 260px;
+  width: 260px;
+  height: 100%;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+main .get-asus-product-details .gapd-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+main .get-asus-product-details .gapd-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+main .get-asus-product-details .gapd-chip {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.14);
+  color: inherit;
+}
+
+main .get-asus-product-details .gapd-title {
+  margin: 0 !important;
+  font-size: 20px !important;
+  line-height: 1.2 !important;
+  font-weight: 700;
+}
+
+main .get-asus-product-details .gapd-model {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+main .get-asus-product-details .gapd-desc {
+  margin: 0 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  opacity: 0.78;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: inherit;
+}
+
+main .get-asus-product-details .gapd-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+main .get-asus-product-details .gapd-price {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+main .get-asus-product-details .gapd-avail {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(45, 202, 114, 0.18);
+  color: inherit;
+}
+
+main .get-asus-product-details .gapd-features {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.85;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .get-asus-product-details .gapd-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+}
+
+main .get-asus-product-details .gapd-cta {
+  flex: 1 1 0;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  font-family: inherit;
+}
+
+main .get-asus-product-details .gapd-cta-primary {
+  background: #006ce1;
+  color: #fff;
+}
+
+main .get-asus-product-details .gapd-cta-primary:hover,
+main .get-asus-product-details .gapd-cta-primary:focus-visible {
+  background: #0051a8;
+}
+
+main .get-asus-product-details .gapd-cta-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: inherit;
+}
+
+main .get-asus-product-details .gapd-cta-secondary:hover,
+main .get-asus-product-details .gapd-cta-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+main .get-asus-product-details .gapd-cta:focus-visible {
+  outline: 2px solid #006ce1;
+  outline-offset: 2px;
+}
+
+main .get-asus-product-details .gapd-empty {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+@media (max-width: 560px) {
+  main .get-asus-product-details .gapd-card {
+    flex-direction: column;
+    height: auto;
+  }
+  main .get-asus-product-details .gapd-image {
+    flex: 0 0 180px;
+    width: 100%;
+    height: 180px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  main .get-asus-product-details { background: #111; }
+}
+body.dark main .get-asus-product-details { background: #111; }
