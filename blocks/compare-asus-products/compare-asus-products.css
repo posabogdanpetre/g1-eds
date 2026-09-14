@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .compare-asus-products {
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+main .compare-asus-products h1,
+main .compare-asus-products h2,
+main .compare-asus-products h3,
+main .compare-asus-products [class*="title"] {
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .compare-asus-products-card {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  /* Single source of truth for the table's label-column width/gap, reused by the
+     header banner spacer and CTA rows so the product-A/product-B boundary lines up
+     across the header, table, and CTA rows. */
+  --label-col: 96px;
+  --label-gap: 10px;
+}
+
+main .compare-asus-products-header-row {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+}
+
+main .compare-asus-products-row-spacer {
+  flex: 0 0 var(--label-col);
+}
+
+main .compare-asus-products-header-row .compare-asus-products-row-spacer {
+  /* header-row's own gap is a 2px cosmetic hairline, not a real column gap —
+     fold it in so the spacer's total footprint still equals label-col + label-gap. */
+  flex-basis: calc(var(--label-col) + var(--label-gap) - 2px);
+}
+
+main .compare-asus-products-header-panel {
+  flex: 1 1 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main .compare-asus-products-header-image {
+  flex: 0 0 140px;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+main .compare-asus-products-header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main .compare-asus-products-header-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #1a2a3a;
+}
+
+main .compare-asus-products-header-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 16px;
+  gap: 8px;
+  background: #ffffff;
+  color: #000000;
+  overflow: hidden;
+}
+
+main .compare-asus-products-header-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+
+main .compare-asus-products-header-desc {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.78;
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+main .compare-asus-products-table {
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+main .compare-asus-products-table-row {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  gap: 10px;
+  border-top: 1px solid rgba(128,128,128,0.15);
+}
+
+main .compare-asus-products-table-row:nth-child(even) {
+  background: rgba(128,128,128,0.14);
+}
+
+main .compare-asus-products-table-label {
+  flex: 0 0 var(--label-col);
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+main .compare-asus-products-table-value {
+  /* flex-basis 0 (not auto) so both value columns split remaining space evenly
+     regardless of that row's own text length — basis:auto would size each cell
+     from its own content first, shifting a longer row's column boundary out of
+     line with every other row. */
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 13px;
+  overflow-wrap: break-word;
+  white-space: normal;
+  box-sizing: border-box;
+  border-left: 2px solid transparent;
+  padding-left: 6px;
+}
+
+main .compare-asus-products-table-value-diff {
+  font-weight: 700;
+  border-left-color: #006ce1;
+}
+
+main .compare-asus-products-table-row-lead .compare-asus-products-table-value {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+main .compare-asus-products-table-row-lead .compare-asus-products-table-label {
+  opacity: 0.85;
+}
+
+main .compare-asus-products-cta-row {
+  padding: 12px;
+  /* Same gap as table-row's, so row-spacer + this gap reproduces label-col +
+     label-gap exactly — keeping the CTA boundary aligned with the table's value
+     columns. */
+  gap: var(--label-gap);
+  border-top: 1px solid rgba(128,128,128,0.15);
+}
+
+main .compare-asus-products-shared-cta-row {
+  padding: 0 12px 12px;
+  gap: var(--label-gap);
+}
+
+main .compare-asus-products-table-cta {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 12px;
+  background: #006ce1;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: opacity 0.15s ease;
+}
+
+main .compare-asus-products-table-cta:hover,
+main .compare-asus-products-table-cta:focus-visible {
+  opacity: 0.88;
+}
+
+main .compare-asus-products-table-cta:focus-visible {
+  outline: 2px solid #006ce1;
+  outline-offset: 2px;
+}
+
+main .compare-asus-products-shared-cta {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 11px;
+  background: #006ce1;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: opacity 0.15s ease;
+}
+
+main .compare-asus-products-shared-cta.compare-asus-products-shared-cta-secondary {
+  background: transparent;
+  color: #0051a8;
+  border: 1px solid #0051a8;
+}
+
+main .compare-asus-products-shared-cta:hover,
+main .compare-asus-products-shared-cta:focus-visible {
+  opacity: 0.88;
+}
+
+main .compare-asus-products-shared-cta:focus-visible {
+  outline: 2px solid #006ce1;
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .compare-asus-products-header-image { background: #1e1e1e; }
+  main .compare-asus-products-card { background: #1a1a1a; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+  main .compare-asus-products-header-content { background: #202020; color: #f0f0f0; }
+  main .compare-asus-products-table-row { border-top-color: rgba(255,255,255,0.12); color: #f0f0f0; }
+  main .compare-asus-products-table-row:nth-child(even) { background: rgba(255,255,255,0.06); }
+  main .compare-asus-products-table-label { opacity: 0.7; }
+  main .compare-asus-products-cta-row { border-top-color: rgba(255,255,255,0.12); }
+  main .compare-asus-products-shared-cta.compare-asus-products-shared-cta-secondary { color: #58b8f5; border-color: #58b8f5; }
+}
+body.dark main .compare-asus-products-header-image { background: #1e1e1e; }
+body.dark main .compare-asus-products-card { background: #1a1a1a; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+body.dark main .compare-asus-products-header-content { background: #202020; color: #f0f0f0; }
+body.dark main .compare-asus-products-table-row { border-top-color: rgba(255,255,255,0.12); color: #f0f0f0; }
+body.dark main .compare-asus-products-table-row:nth-child(even) { background: rgba(255,255,255,0.06); }
+body.dark main .compare-asus-products-table-label { opacity: 0.7; }
+body.dark main .compare-asus-products-cta-row { border-top-color: rgba(255,255,255,0.12); }
+body.dark main .compare-asus-products-shared-cta.compare-asus-products-shared-cta-secondary { color: #58b8f5; border-color: #58b8f5; }
