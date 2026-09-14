@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .find-asus-products {
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+}
+
+main .find-asus-products h1,
+main .find-asus-products h2,
+main .find-asus-products h3,
+main .find-asus-products [class*="name"] {
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .find-asus-products .find-asus-products-carousel-wrap {
+  position: relative;
+}
+
+main .find-asus-products .find-asus-products-track {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px;
+}
+
+main .find-asus-products .find-asus-products-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .find-asus-products .find-asus-products-card {
+  flex: 0 0 220px;
+  width: 220px;
+  height: 360px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  background: #f2f2f2;
+}
+
+main .find-asus-products .find-asus-products-img {
+  width: 100%;
+  height: 150px;
+  flex: 0 0 150px;
+  background: #e6e6e6;
+  overflow: hidden;
+}
+
+main .find-asus-products .find-asus-products-info {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main .find-asus-products .find-asus-products-name {
+  margin: 0 !important;
+  font-size: 14px !important;
+  line-height: 1.25 !important;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+main .find-asus-products .find-asus-products-meta {
+  font-size: 11px;
+  opacity: 0.78;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+main .find-asus-products .find-asus-products-specs {
+  list-style: none;
+  margin: 2px 0 0 !important;
+  padding: 0;
+  font-size: 11px;
+  opacity: 0.82;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+main .find-asus-products .find-asus-products-specs li {
+  position: relative;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main .find-asus-products .find-asus-products-specs li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+main .find-asus-products .find-asus-products-desc {
+  margin: 0 !important;
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  opacity: 0.78;
+  overflow-wrap: anywhere;
+}
+
+main .find-asus-products .find-asus-products-price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: auto;
+}
+
+main .find-asus-products .find-asus-products-price {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+main .find-asus-products .find-asus-products-avail {
+  font-size: 10px;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+main .find-asus-products .find-asus-products-cta {
+  margin-top: 8px;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  width: 100%;
+  background: #006ce1;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+main .find-asus-products .find-asus-products-cta:hover,
+main .find-asus-products .find-asus-products-cta:focus-visible {
+  background: #0051a8;
+  outline: none;
+}
+
+main .find-asus-products .find-asus-products-cta:focus-visible {
+  outline: 2px solid #006ce1;
+  outline-offset: 2px;
+}
+
+main .find-asus-products .find-asus-products-arrow {
+  position: absolute;
+  top: 75px;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: background-color 0.15s ease;
+}
+
+main .find-asus-products .find-asus-products-arrow:hover,
+main .find-asus-products .find-asus-products-arrow:focus-visible {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+main .find-asus-products .find-asus-products-arrow:focus-visible {
+  outline: 2px solid #006ce1;
+  outline-offset: 2px;
+}
+
+main .find-asus-products .find-asus-products-arrow-left {
+  left: 8px;
+}
+
+main .find-asus-products .find-asus-products-arrow-right {
+  right: 8px;
+}
+
+main .find-asus-products .find-asus-products-fade {
+  border-radius: 0 8px 8px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .find-asus-products {
+    background: #111;
+  }
+}
+body.dark main .find-asus-products {
+  background: #111;
+}
