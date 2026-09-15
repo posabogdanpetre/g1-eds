@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .match-asus-router-to-home {
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  box-sizing: border-box;
+}
+
+main .match-asus-router-to-home h1,
+main .match-asus-router-to-home h2,
+main .match-asus-router-to-home h3,
+main .match-asus-router-to-home [class*="name"] {
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-carousel-wrap {
+  position: relative;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-track {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-track {
+  align-items: stretch;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-card {
+  flex: 0 0 220px;
+  width: 220px;
+  min-height: 360px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-img {
+  width: 100%;
+  height: 140px;
+  flex: 0 0 auto;
+  background: #f2f2f2;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-info {
+  flex: 1;
+  min-height: 0;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-name {
+  margin: 0 !important;
+  font-size: 14px !important;
+  font-weight: 700;
+  line-height: 1.25 !important;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-spec {
+  margin: 0 !important;
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  opacity: 0.78;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-fit {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-fit li {
+  font-size: 10.5px;
+  line-height: 1.3;
+  opacity: 0.88;
+  padding-left: 11px;
+  position: relative;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-fit li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-price {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-badge {
+  background: #006ce1;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-cta {
+  width: 100%;
+  border: none;
+  background: #006ce1;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background-color 0.15s ease;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-cta:hover,
+main .match-asus-router-to-home .match-asus-router-to-home-cta:focus-visible {
+  background: #0051a8;
+  outline: 2px solid #00a3e7;
+  outline-offset: 1px;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-fade {
+  border-radius: 0 4px 4px 0;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  display: flex;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-arrow-left {
+  left: 4px;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-arrow-right {
+  right: 4px;
+}
+
+main .match-asus-router-to-home .match-asus-router-to-home-arrow:focus-visible {
+  outline: 2px solid #006ce1;
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .match-asus-router-to-home { background: #111; }
+}
+body.dark main .match-asus-router-to-home { background: #111; }
